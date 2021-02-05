@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+outline: none;
+}
+body {
+font-family: Arial;
+background-color: #3498DB;
+padding: 50px;
+}
+.login {
+margin: 20px auto;
+width: 400px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: #777;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+border: 2px solid transparent;
+background: #3498DB;
+color: #ffffff;
+font-size: 16px;
+line-height: 25px;
+padding: 10px 0;
+text-decoration: none;
+text-shadow: none;
+border-radius: 3px;
+box-shadow: none;
+transition: 0.25s;
+display: block;
+width: 250px;
+margin: 0 auto;
+}
+
+.btn:hover {
+background-color: #2980B9;
+}
+
+.login-link {
+font-size: 12px;
+color: #444;
+display: block;
+margin-top: 12px;
+}
+
+div.buttonBlock {text-align: center}
+div.buttonBlock button {
+        background-color: #2980B9;
+        width:200px;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<center><h5>Welcome to Industrial Health Risk Analyzer</h5></center>
+
+<form action= "http://localhost:5000/options" method = "POST">
+
+<div class="login">
+
+<div class="login-screen">
+
+<div class="app-title">
+ {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
+<h2>Options</h2>
+
+<div class="buttonBlock">
+<button type="submit" name="submit_button" value="Preprocess"> Pre-process data </button>
+</div>
+<div class="buttonBlock">
+   <button type="submit" name="submit_button" value="Trainclassifiers"> Train classifiers </button>
+</div>
+<div class="buttonBlock">
+    <button type="submit" name="submit_button" value="ChatBot">Initiate Incident</button>
+</div>
+</div>
+</div>
+
+</form>
+
+</body>
+</html>
