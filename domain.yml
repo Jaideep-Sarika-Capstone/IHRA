@@ -1,0 +1,112 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- deny
+- greet
+- inform
+- affirm
+- goodbye
+- stop
+- out_of_scope
+- bot_challenge
+- thankyou
+entities:
+- date
+- country
+slots:
+  date:
+    type: unfeaturized
+    influence_conversation: false
+  country:
+    type: unfeaturized
+    influence_conversation: false
+  ind_sector:
+    type: unfeaturized
+    influence_conversation: false
+  gender:
+    type: unfeaturized
+    influence_conversation: false
+  emp_type:
+      type: unfeaturized
+      influence_conversation: false
+  accident_type:
+      type: unfeaturized
+      influence_conversation: false
+  accident_level:
+    type: unfeaturized
+    influence_conversation: false
+  description:
+    type: unfeaturized
+    influence_conversation: false
+  incno:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hi, I am Tony Stark! I will guide you through the process of raising an Accident Event. This will help in engaging the right teams promptly. Would you like to answer a few questions about the accident?
+  utter_goodbye:
+  - text: See you tomorrow. Bye!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_date:
+  - text: Do you mind telling me about the date of the incident (dd/mm/yyyy)?
+  utter_ask_country:
+  - text: In which country did the incident occur?
+  utter_ask_ind_sector:
+  - buttons:
+    - payload: Metals
+      title: Metals
+    - payload: Mining
+      title: Mining
+    - payload: Others
+      title: Others
+    text: Do you know the sector of the industry involved?(Metals, Mining, Others)?
+  utter_ask_gender:
+  - text: What is the gender of the involved person? (Male, Female)?
+  utter_ask_emp_type:
+  - text: Is the involved person an Employee or External?
+  utter_ask_accident_type:
+  - text: Pls provide the accident type? [Pressed, Cut, Venious Aninal, Burn, etc]?
+  utter_ask_accident_level:
+  - buttons:
+    - payload: I
+      title: Temp inconvenience or slight pain
+    - payload: II
+      title: Temp inj or impair. - no need of med assist.
+    - payload: III
+      title: Inj or disabilty - needs immed. med. assist.
+    - payload: IV
+      title: Perm disability or life threat.
+    - payload: V
+      title: Could lead to victim's death
+    text: Do you know the severity level of the accident?[I,II,III,IV,V]
+  utter_ask_description:
+  - text: Please describe the incident explaining the cause of the accident and current state of the victim. Max 200 words?
+  utter_slots_values:
+  - text: |-
+      Here's your Accident log:
+       - Date: {date}
+       - Country involved: {country}
+       - Industry Sector: {ind_sector}
+       - Gender: {gender}
+       - Employment type: {emp_type}
+       - Accident type: {accident_type}
+       - Accident Level: {accident_level}
+       - Description: {description}
+       - Thanks, your answers have been recorded and Incident created! Pls note the incident no is {incno}
+  utter_no_worries:
+  - text: No problem :)
+  utter_ask_continue:
+  - text: Sorry, I don't quite understand. Do you want to continue?
+
+actions:
+- accident_form
+- action_reset_all_slots
+- utter_ask_continue
+- utter_goodbye
+- utter_greet
+- utter_slots_values
+forms:
+  accident_form: {}
