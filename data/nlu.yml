@@ -1,0 +1,158 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi bot
+    - Mining
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - ok
+    - why not
+    - ok great
+    - yes I did
+    - yeah, great
+    - pretty good
+    - fine
+    - You bet
+    - I sure did
+    - more or less
+    - ya
+    - Yes
+    - ofcource
+    - maybe
+    - Perm
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - none
+    - absolutely not
+    - nope
+    - no thanks
+    - none of your business
+    - that's not right
+    - stop asking
+    - didnt do any
+    - no I didnt
+    - not great
+    - stop
+    - this isn't working
+    - I already told you that
+    - don't like that
+    - I don't want to tell you that
+    - nevermind
+    - I want to do something else
+    - I changed my mind
+    - that's not what I want to do
+    - wait stop
+    - you're no help
+    - this is no help at all
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: inform
+  examples: |
+    - [12-01-1999](date)
+    - [01-09-2010](date)
+    - [08-15-2020](date)
+    - [07-01-2021](date)
+    - [11-01-2013](date)
+    - [09-22-2012](date)
+    - [06-30-2011](date)
+    - [02-27-2012](date)
+    - [12/12/1212](date)
+    - I want to get up early and go for a run
+    - Be more patient with my family
+    - Try to be a better friend
+    - Make sure to eat better tomorrow
+    - eat less junk food
+    - eat better
+    - spend less time on my phone
+    - don't procrastinate
+    - Go to bed earlier
+    - Don't stay up so late
+    - try to make some time to meditate
+    - i ate pretty healthy overall
+    - lots of fruits and vegetables
+    - I ate a salad
+    - too many snacks
+    - too many sweets
+    - too much junk food
+    - a lot of carbs
+    - too much fatty food
+    - Get more exercise
+    - when opened access ladder people carrying truck employee had his right hand pressed into support bracket same suffering superficial injury
+    - employee transiting grs area when he came slip suffering twist his left knee
+    - the injured his collaborator at time making 4 hdpe pipe which be used for hydraulic filling is released causing one end pipe impact lip causing an injury  apparently support 1 deconcentrates release little pipe this action generates pipe presented rubber victalica copla is released generating impact previously described the pipe empty without hydraulic load
+    - during maintenance locomotive n  16 workshop level 1170 assistant when pulling locomotive chair backwards stumble against ventilation grille falling platform locomotive then floor workshop from height 117m generating injury at time accident assistant used his safety helmet chin strap
+    - employee report when attempting manually ingot zinco rotary table l1 ingot hit left hand against angle structure ingot by pressing finger between ingot angle
+    - the employee performing cutting activity carbon steel pipe attached band saw machine due uneven weight distribution tube moved downward other end projected upwards pressing thumb
+    - when making change support vertical pump 6 40357 zinc two mechanic raised beam in h 4 x 27 m 45 kg one at each end being at height the injured persons knee slip from his hand causing injury described
+    - during reduction activity tube employee attached tube walrus when he hit tube hammer he untied walrus by reaching his finger
+    - during execution area cleaning activity using hoe employee hit against fixed metal structure area coming reach abdomen left
+    - during preparation for office cleaning activity employee made use stair railing it had contact clamp used lock signaling board
+    - the maid while walking electrolysis area stumbled fell next bathroom room b
+- intent: thankyou
+  examples: |
+    - okay great thanks
+    - thank you
+    - sure thanks
+    - thanks bye
+    - thanks
+    - tnx
+- intent: out_of_scope
+  examples: |
+    - how old are you
+    - I want to order a pizza
+    - tell me the weather
+    - i want to buy tickets
+    - weather
+    - train tickets
+    - flight tickets
+    - reservations
+    - how is the weather?
+    - is it going to rain?
+    - I want to order food
+    - I want to buy clothes
+
